@@ -1,0 +1,152 @@
+---
+title: "Final Project Report"
+author: "Paul Park 23046317"
+output:
+  pdf_document:
+    latex_engine: xelatex
+---
+
+This assignment is designed to provide both written and visual explanations of the storm trajectories between 1980 and 2010. First, I will start by exploring some important questions that naturally arise in analyzing the data.
+
+One thing to note, I had to change the 'LaTex engine' from 'pdflatex' to 'xelatex' in order to avoid errors when knitting pdf.
+
+Obtain frequencies and barplots for number of storms per year.
+
+```{r, echo = FALSE}
+read.csv("../data/num_storms_per_year.csv")
+```
+>> This table shows the number of storms per year between 1980 and 2010. Notice that there was not a single year when there were no storms.
+
+\includegraphics[width=250pt]{../images/num_storms_per_year.png}
+
+>> This barplot visualizes the table above.
+
+Obtain frequencies and barplots for number of storms per year with winds >= 35 knots.
+
+```{r, echo = FALSE}
+read.csv("../data/num_storms_per_year_35.csv")
+```
+>> This table shows the number of storms per year between 1980 and 2010 with wind speeds greater than or equal to 35 knots.
+
+\includegraphics[width=250pt]{../images/num_storms_per_year_35.png}
+
+>> This barplot visualizes the table above.
+
+Obtain frequencies and barplots for number of storms per year with winds >= 64 knots.
+
+```{r, echo = FALSE}
+read.csv("../data/num_storms_per_year_64.csv")
+```
+>> This table shows the number of storms per year between 1980 and 2010 with winds speeds greater than or equal to 64 knots (known as hurricanes).
+
+\includegraphics[width=250pt]{../images/num_storms_per_year_64.png}
+
+>> This barplot visualizes the table above.
+
+Obtain frequencies and barplots for number of storms per year with winds >= 96 knots.
+
+```{r, echo = FALSE}
+read.csv("../data/num_storms_per_year_96.csv")
+```
+>> This table shows the number of storms per year between 1980 and 2010 with winds speeds greater than or equal to 96 knots (known as major hurricanes).
+
+\includegraphics[width=250pt]{../images/num_storms_per_year_96.png}
+
+>> This barplot visualizes the table above.
+
+Obtain frequencies and barplots for number of storms per month.
+
+```{r, echo = FALSE}
+read.csv("../data/num_storms_per_month.csv")
+```
+>> This table shows the number of storms per month between 1980 and 2010.
+
+\includegraphics[width=250pt]{../images/num_storms_per_month.png}
+
+>> This barplot visualizes the above table.
+
+Obtain frequencies and barplots for number of storms per month with winds >= 35 knots.
+
+```{r, echo = FALSE}
+read.csv("../data/num_storms_per_month_35.csv")
+```
+>> This table shows the number of storms per month between 1980 and 2010 with wind speeds greater than or equal to 35 knots.
+
+\includegraphics[width=250pt]{../images/num_storms_per_month_35.png}
+
+>> This barplot visualizes the above table.
+
+Obtain frequencies and barplots for number of storms per month with winds >= 64 knots.
+
+```{r, echo = FALSE}
+read.csv("../data/num_storms_per_month_64.csv")
+```
+>> This table shows the number of storms per month between 1980 and 2010 with wind speed greater than or equal to 64 knots (known as hurricanes).
+
+\includegraphics[width=250pt]{../images/num_storms_per_month_64.png}
+
+>> This barplot visualizes the above table.
+
+Obtain frequencies and barplots for number of storms per month with winds >= 96 knots.
+
+```{r, echo = FALSE}
+read.csv("../data/num_storms_per_month_96.csv")
+```
+>> This table shows the number of storms per month between 1980 and 2010 with wind speed greater than or equal to 96 knots (known as major hurricanes).
+
+\includegraphics[width=250pt]{../images/num_storms_per_month_96.png}
+
+>> This visualizes the above table.
+
+Obtain annual average number of storms for each category.
+
+```{r, echo = FALSE}
+read.csv("../data/summary_all.csv")
+```
+>> This table provides a brief summary of the number of storms categorized by wind speeds.
+
+Obtain regression analysis of mean pressure and mean wind speed for each storm.
+
+\includegraphics[width=250pt]{../images/regression_mean.png}
+
+>> There is a pretty nice regression line (once you get rid of the obvious outliers) indicating the pressure and wind speed are highly correlated.
+
+Obtain regression analysis of median pressure and median wind speed for each storm.
+
+\includegraphics[width=250pt]{../images/regression_median.png}
+
+>> Again, just like the mean values, the median values of pressure and wind speed also indicate a high correlation.
+
+Now we get to see the cool plots.
+
+Let's start with the plot showing the trajectory of all storms between 1980 and 2010.
+
+\includegraphics[width=250pt]{../images/trajectory_all.png}
+
+>> Each curve represents the trajectory of the certain storm. As you can tell, there have been a lot of storms in this 31 year interval.
+
+Then the plot showing the trajectory of storms per month
+
+\includegraphics[width=250pt]{../images/trajectory_month.png}
+
+>> Notice that there are significantly less storms in certain months. There were actually no storms that started and ended in February (the one that started in January but ended in February is plotted in the January facet).
+
+Obtain the plot showing the trajectory of storms in decade 1980s
+
+\includegraphics[width=250pt]{../images/trajectory_1980s.png}
+
+>> Nicely distributed storms in the course of a ten year period.
+
+Obtain the plot showing the trajectory of storms in decade 1990s
+
+\includegraphics[width=250pt]{../images/trajectory_1990s.png}
+
+>> Again, storms are distributed evenly.
+
+Obtain the plot showing the trajectory of storms in decade 2000s
+
+\includegraphics[width=250pt]{../images/trajectory_2000s.png}
+
+>> These are the storms from the most recent decade (2000s). Studying these patterns might lead us somewhere.
+
+Thank you very much for reading this project. It's been a great semester everyone!

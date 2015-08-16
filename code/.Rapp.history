@@ -1,0 +1,3 @@
+getwd()
+raw <- read.csv("rawdata/rawdata.hdat", sep = "", header = FALSE)
+lm(mean_wind~mean_press)
